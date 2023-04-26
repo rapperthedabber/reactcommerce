@@ -7,9 +7,9 @@ export default function Home() {
   const { data: session } = useSession()
   if(!session){
     return(
-    <div className = {'bg-red-900 w-screen h-screen flex-items'}>
+    <div className = {'bg-red-900 w-screen h-screen flex items-center'}>
     <div className={'text-center w-full'}>
-    <button className={'bg-white p-2 '} onClick={()=>signIn('google')}>Login to Google</button>
+    <button className={'bg-white p-2 rounded-lg items-center '} onClick={()=>signIn('google')}>Login to Google</button>
     </div>
   </div>
     );
