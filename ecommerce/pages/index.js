@@ -9,12 +9,17 @@ export default function Home() {
     return(
     <div className = {'bg-red-900 w-screen h-screen flex-items'}>
     <div className={'text-center w-full'}>
-    <button className={'bg-white p-2 '} onClick={signIn('google')}>Login to Google</button>
+    <button className={'bg-white p-2 '} onClick={()=>signIn('google')}>Login to Google</button>
     </div>
   </div>
-    )
+    );
   }
+
   return (
-    <h1>logged in</h1>
+    <div>
+    <h1>logged in{session.user.email}</h1>
+    <button className ={'bg-red p-2'}onClick={()=>signOut()}>Sign Out</button>
+   
+    </div>
   )
 }
