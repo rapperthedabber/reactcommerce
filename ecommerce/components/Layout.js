@@ -1,10 +1,8 @@
+
 export default function layout(){
     return(
-        <container className = {'bg-white-900'}>
-            <div>
-                
-            </div>
-        </container>
-
+        <div className={'bg-gray-100'} >
+            <h1 className ={'text-black'}>Hello</h1>
+        </div>
     )
 }

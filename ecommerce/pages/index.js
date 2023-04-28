@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Nav from '../components/nav'
+import Layout from '@/components/Layout'
 import { Inter } from 'next/font/google'
+
 
 import { useSession, signIn, signOut } from "next-auth/react"
 
@@ -21,9 +23,17 @@ export default function Home() {
 
   return (
     <div>
-    <h1>logged in{session.user.email}</h1>
+      <Nav/>
+      <div className ={'bg-red-900 w-screen h-screen flex items-center'} >
+      <Layout />
+    </div>
+    <div>
+    </div>
+    <div className={'text-center w-full'}>
     <button className ={'bg-red p-2'}onClick={()=>signOut()}>Sign Out</button>
-   
+    <h1>logged in as {session.user.email}</h1>
+    
+    </div>
     </div>
   )
 }
