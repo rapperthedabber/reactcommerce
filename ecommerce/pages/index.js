@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Nav from '../components/nav'
-import Layout from '@/components/Layout'
+import Jacket from '@/components/Jacket'
+import Shoes from '../components/Shoes'
 import { Inter } from 'next/font/google'
 
 
@@ -24,9 +25,11 @@ export default function Home() {
   return (
     <div>
       <Nav/>
-      <div className ={'bg-red-900 w-screen h-screen flex items-center'} >
-      <Layout />
-    </div>
+      <div className ={'bg-red-900 w-screen h-screen flex flex items-row space-x-2'} >
+      
+      <Jacket />
+      <Shoes/>
+      </div>
     <div>
     </div>
     <div className={'text-center w-full'}>
@@ -35,5 +38,6 @@ export default function Home() {
     
     </div>
     </div>
+
   )
 }
