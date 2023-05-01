@@ -1,7 +1,8 @@
 import {useRouter} from 'next/router'
 import Link from 'next/link'
 import axios from 'axios'
-import getJacket from '../pages/api/Jacket'
+import getJacket from '../pages/api/JacketaAPI'
+
 
 export default function Nav(){
     const router = useRouter()
@@ -15,14 +16,9 @@ export default function Nav(){
 </svg>
 <span>Tokyo Commerce</span>
 </div>
-        <select name = 'products' id="products-select"className={'flex-row space-y-4'}>
-        <option value="Products" ><Link href={'api/Products'}>Products</Link></option>
-    <option value="Jacket"onClick={
-      ()=>getJacket()
-    } ><Link href = {'/Jacket'} >Jacket</Link></option>
-    <option value="Shoe"> <Link href = {'/Shoe'}>Shoe</Link></option>
-    <option value="Pants"><Link href = {'/Pants'}>Pants</Link></option>
-    </select>
+        <Link href = {'/Shoes/shoe'}>Shoes</Link>
+        <Link href={'Jacket/jacket.js'}>Jacket</Link>
+        <Link href={'Products/product.js'}>Products</Link>
         <Link href = {'/cart'}>Cart</Link>
         
     </div>
