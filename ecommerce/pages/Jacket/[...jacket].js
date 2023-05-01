@@ -1,5 +1,5 @@
-import Jacket from '../../components/Jacket'
-import Nav from '../../components/nav'
+import Jacket from '@/components/Jacket'
+import Nav from '@/components/nav'
 import {useRouter} from 'next/router'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Link from 'next/link'
@@ -9,6 +9,7 @@ export default  function renderJacket(){
   if(session)
   {
     return(
+      <>
       <div>
       <Nav/>
       <div className ={'bg-red-900 w-screen h-screen flex flex items-row space-x-2'} >
@@ -23,6 +24,7 @@ export default  function renderJacket(){
     
     </div>
     </div>
+    </>
     )
   }
    }

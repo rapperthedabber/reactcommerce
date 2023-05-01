@@ -6,7 +6,17 @@ import getJacket from '../pages/api/JacketaAPI'
 
 export default function Nav(){
     const router = useRouter()
+    const handleJacket = ()=>{
+        router.push('/Jacket/jacket')
+    }
+    const handleProduct = () =>{
+        router.push('/Products/product')
+    }
+    const handleShoe= () =>{
+        router.push('/Shoes/shoe')
+    }
     const {pathname} = router;
+   
     return(
     <div className={'bg-white-900 space-x-5'}>
         <div className={'flex float-right'}>
@@ -16,9 +26,9 @@ export default function Nav(){
 </svg>
 <span>Tokyo Commerce</span>
 </div>
-        <Link href = {'/Shoes/shoe'}>Shoes</Link>
-        <Link href={'Jacket/jacket.js'}>Jacket</Link>
-        <Link href={'Products/product.js'}>Products</Link>
+        <button onClick ={()=>handleShoe()}>Shoes</button>
+        <button onClick ={()=>handleJacket()}>Jacket</button>
+        <button onClick ={()=> handleProduct()}>Products</button>
         <Link href = {'/cart'}>Cart</Link>
         
     </div>
