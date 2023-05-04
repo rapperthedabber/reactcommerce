@@ -18,7 +18,7 @@ export default function Nav(){
     const {pathname} = router;
    
     return(
-    <div className={'bg-white-900 space-x-5'}>
+    <div className={'bg-white w-screen space-x-5'}>
         <div className={'flex float-right'}>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />

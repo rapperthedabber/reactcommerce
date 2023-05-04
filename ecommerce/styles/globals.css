@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+   
+    background: url(https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/4/2022/11/Miyajima-Shrine-iStock-500828709-1024x678.jpg) ; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 10;
+    
+    
+}
+.background{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 100px;
+    
+}
+
