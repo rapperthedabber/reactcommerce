@@ -3,40 +3,39 @@ import Astroboy from '../images/Astroboy.jpg'
 import Pochita from '../images/Pochita.jpg'
 import Naruto from '../images/Naruto.jpg'
 export default function Shoes(){
+  const Shoe = [{
+    url: 'https://m.media-amazon.com/images/I/51Mu4mf8okL.jpg',
+    description: 'This is a shoe inspired by Tezuka Osamu Astroboy',
+    price: '1022.99'
+  }
+,{
+  url: 'https://m.media-amazon.com/images/I/51cJUpo6KiL._AC_UY1000_.jpg',
+  description: 'This shoe is from Chainsaw Man inspired by the character, Pochita',
+  price: '200.00'
+}, {
+  url: 'https://www.reallgraphics.com/wp-content/uploads/2023/01/arthur-pendragon-skate-sneakers-seven-deadly-sins-custom-anime-shoes-1_sbyskn.jpg',
+  description: 'This shoe is from Chainsaw Man inspired by the character, Pochita',
+  price: '200.00'
+  
+},{
+  url: 'https://www.reallgraphics.com/wp-content/uploads/2023/01/anime-shoes-ace-one-piece-1_gbmzfg.jpg',
+  description: 'This shoe is from Chainsaw Man inspired by the character, Pochita',
+  price: '200.00'
+  
+}]
     return(
+      <div className ='shoeItems'>
+{Shoe.map((shoes)=>(
+<div className='shoeStuff'>
+   <img  id ='shoeImage' src = {shoes.url}></img>
+   <h2 id = 'shoeDescription'>{shoes.description}</h2>
+   <h3 id ='shoePrice'>{shoes.price}</h3>
+   </div>
+))}
+      </div>
+  
       
-       
-          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white " >
-  <Image className={"w-200 h-200"} src={Astroboy} alt="Sunset in the mountains"/>
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">Astroboy Shoes</div>
-    <p class="text-gray-700 text-base">
-        Inspired by Osama Tezuka, this shoe design is inspired by Tezuka's cultural phenomenon 'Astro Boy'
-    </p>
-  </div>
-  <div class="px-6 pt-4 pb-2">
-  <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">59.99</span>
 
-  </div>
-<div>
-    < div class ='flex items-row'>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white  "  >
-        <Image className={"w-200 h-200"} src= {Pochita} alt="Sunset in the mountains"/>
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-          <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-          </p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">79.99</span>
-        </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      
-    
     
        
     )

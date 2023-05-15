@@ -12,7 +12,8 @@ export default function Layout() {
   if(!session){
     return(
       <>
-      <Nav />
+      <h1 id ='Welcome'>Welcome to Tokyo Commerce!</h1>
+      <h5 id = 'Welcome2'>An e-commerce for anime fans</h5>
     <div class = "background" >
     <div className={'text-center w-full'}>
     <button className={'bg-white p-2 rounded-lg items-center '} onClick={()=>signIn('google')}>Login to Google</button>
@@ -25,7 +26,7 @@ export default function Layout() {
   return (
     <div>
       <Nav/>
-      <div className ={' flex flex items-row space-x-2'} >
+      <div >
       
       <Jacket />
       <Shoes/>

@@ -12,15 +12,13 @@ export default  function renderJacket(){
       <>
       <div>
       <Nav/>
-      <div className ={'bg-red-900 w-screen h-screen flex flex items-row space-x-2'} >
+      <div className ={' w-screen h-screen flex flex items-row space-x-2'} >
       
       <Jacket />
       </div>
     <div>
     </div>
     <div className={'text-center w-full'}>
-    <button className ={'bg-red p-2'}onClick={()=>signOut()}>Sign Out</button>
-    <h1>logged in as {session.user.email}</h1>
     
     </div>
     </div>
