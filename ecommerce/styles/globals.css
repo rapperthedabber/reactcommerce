@@ -7,9 +7,69 @@ body{
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23ff9d00' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fb8d17' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23f47d24' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ed6e2d' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23e35f34' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23d85239' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23cc453e' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23be3941' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23b02f43' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23a02644' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23901e44' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23801843' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%236f1341' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%235e0f3d' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%234e0c38' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%233e0933' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%232e062c' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
     background-size: cover;
-    display: flex;
-    flex-wrap: wrap;
+
    
+}
+
+
+.carouselContainer{
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 20px;
+}
+
+#carouselItem{
+    height: 20rem;
+    min-width: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s cubic-bezier(0.39 ,0.575, 0.565, 1)
+}
+
+.aboutCard{
+    background-color: wheat;
+    color: black;
+    overflow: auto;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+    display: grid;
+    
+
+}
+
+#loginSignup{
+    background-color: lightblue;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   grid-column: 1;
+   grid-row: 1;
+}
+
+#About{
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 20px;
+    
+}
+#aboutInfo{
+    padding: 50px;
+}
+
+#aboutImage{
+    margin-left:150px;
+    border-radius: 10px;
+    height: 500px;
+    width: 1000px;
+    border: solid black;
 }
 
 
@@ -103,12 +163,14 @@ body{
     width: 500px;
     height: 500px;
     border-radius: 20px;
+    margin-left: 400px;
 }
 .background:hover{
     display: flex;
     justify-items: center;
     align-items: center;
     margin: 100px;
+    margin-left: 400px;
     border:solid black;
     background-color: wheat;
     width: 500px;

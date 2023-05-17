@@ -2,9 +2,12 @@ import {useRouter} from 'next/router'
 import Link from 'next/link'
 import axios from 'axios'
 import getJacket from '../pages/api/JacketaAPI'
+import { useSession, signIn, signOut } from "next-auth/react"
 
 
 export default function Nav(){
+    
+
     const router = useRouter()
     const handleJacket = ()=>{
         router.push('/Jacket/jacket')
@@ -19,7 +22,6 @@ export default function Nav(){
         router.push('/Profile/Profile')
     }
     const {pathname} = router;
-   
     return(
     <div className= 'navBar'>
         <div className={'flex float-right'}>
@@ -36,6 +38,9 @@ export default function Nav(){
         <Link href = {'/cart'}>Cart</Link>
         
     </div>
-    )
+    )}
+
+
     
-}
+    
+    
