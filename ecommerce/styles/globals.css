@@ -89,6 +89,7 @@ body{
 #tokyoIcon{
     background-color: white;
     border-radius: 20px;
+   display: flex;
     width: 30px;
     height: 30px;
     padding: 5px;
@@ -113,6 +114,7 @@ body{
     justify-content: space-between;
     padding: 20px;
     background-color: wheat;
+   
 }
 
 #Tokyo{
@@ -138,6 +140,18 @@ body{
 
 #Jacket{
     margin: 5px;
+}
+
+#editProfile{
+   
+    float: right;
+}
+
+#editProfile:hover{
+    margin: 5px;
+    float: right;
+    color: black;
+    font-weight: bolder;
 }
 
 #Products:hover{
@@ -193,8 +207,9 @@ body{
     align-items: center;
     background-color: wheat;
     overflow: auto;
+    padding: 40px;
     margin: 30px;
-    height: 500px;
+    height: 1100px;
 }
 
 /* #shoeItems{
@@ -279,6 +294,8 @@ margin-left: 20px;
     float: right;
     width: 600px;
     height: 500px ;
+    border: solid;
+    margin: 20px;
 }
 
 #name{
@@ -322,7 +339,6 @@ margin-left: 20px;
 
 .jacketItem{
     display: flex;
-    position: relative;
     border-radius: 20px;
     margin-top: 20px;
     flex-wrap: wrap;
@@ -424,4 +440,93 @@ input{
 #SignUp{
     background-color: white;
     padding: 10px;
+}
+
+#pen{
+    width:30px;
+    height:30px;
+    float: right;
+    display: flex;
+}
+.penContainer{
+    display: flex;
+}
+#pen:hover{
+    width:30px;
+    height:30px;
+    display: flex;
+    float: right;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+form{
+   margin-left: 300px;
+
+}
+
+#editName{
+    color: whitesmoke;
+}
+
+#update{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+   
+    
+}
+
+.UPDATE:hover #thumbs {
+
+    display: flex;
+    margin-right: 50px;
+    display: inline;
+    
+
+   
+    
+}
+
+.UPDATE{
+    display: flex;
+    margin-right: 50px;
+    background-color: white;
+    width: 200px;
+    margin-bottom: 100px;
+    margin: 20px;
+}
+
+#thumbs{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    margin: 20px;
+    float: right;
+    display: none;
+
+}
+
+#editImage{
+    width: 300px;
+    height: 300px;
+    float: right;
+    display: flex;
+    margin: 50px;
+    border: solid;
+    border-radius: 20px;
+    font-size: 100px;
+    background-color: white;
+    
+}
+
+#Name {
+    width: 700px;
+}
+
+input{
+    width: 500px;
+    margin: 20px;
 }
