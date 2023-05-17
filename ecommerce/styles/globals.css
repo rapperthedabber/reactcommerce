@@ -33,7 +33,7 @@ body{
 .aboutCard{
     background-color: wheat;
     color: black;
-    overflow: auto;
+    margin: 20px;
    font-family:Georgia, 'Times New Roman', Times, serif;
     display: grid;
     
@@ -60,8 +60,20 @@ body{
     padding: 20px;
     
 }
+
+#Home{
+    margin: 10px;
+    
+}
+
+#Home:hover{
+    margin: 10px;
+    font-weight: bolder;
+}
 #aboutInfo{
     padding: 50px;
+    margin: 20px;
+    background:white
 }
 
 #aboutImage{
@@ -156,33 +168,33 @@ body{
 
 .background{
     display: flex;
-    justify-items: center;
-    align-items: center;
-    margin: 100px;
     background-color: wheat;
-    width: 500px;
-    height: 500px;
-    border-radius: 20px;
-    margin-left: 400px;
+   overflow: auto;
+   padding: 50px;
+   margin-top: 100px;
+   margin-bottom: 100px;
+   margin: 20px;
+   
+
 }
 .background:hover{
     display: flex;
-    justify-items: center;
-    align-items: center;
-    margin: 100px;
-    margin-left: 400px;
-    border:solid black;
     background-color: wheat;
-    width: 500px;
-    height: 500px;
-    border-radius: 20px;
+    border: solid black;
+   overflow: auto;
+   padding: 50px;
+   margin-top: 100px;
+   margin-bottom: 100px;
+   margin: 20px;
 }
 
 .ProfileCard{
-    width: 200px;
-    height: 200px;
+
     align-items: center;
-    margin-left: 400px;
+    background-color: wheat;
+    overflow: auto;
+    margin: 30px;
+    height: 500px;
 }
 
 /* #shoeItems{
@@ -254,40 +266,57 @@ box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
    
 }
 
+#profileName{
+font-size: 20px;
+font-family: monospace;
+font-weight: bolder;
+margin-left: 20px;
+
+}
+
+#profileImage{
+    display: flex;
+    float: right;
+    width: 600px;
+    height: 500px ;
+}
+
 #name{
     font-family: 'Courier New', Courier, monospace;
-    margin: 5px;
+    margin: 20px;
+    margin-left: 100px;
     border-radius: 20px;
     background-color: white;
     font-size: 50px;
-    
+    width: 500px;
+   padding: 30px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #age{
     font-family: 'Courier New', Courier, monospace;
-    margin: 5px;
+    margin-left: 100px;
     border-radius: 20px;
     background-color: white;
     font-size: 50px;
-    
+    width: 500px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #bio{
     font-family: 'Courier New', Courier, monospace;
-    margin: 5px;
+    margin-left: 100px;
     border-radius: 20px;
     background-color: white;
     font-size: 50px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    width: 500px;
 }
 
 #profileBio{
     font-weight: bolder;
     color: black;
     font-size: 50px;
-    background-color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
@@ -353,4 +382,46 @@ box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
     margin: 10px;
     background-color: gray;
 
+}
+
+.loginCard{
+    background-color:wheat;
+    border: solid;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+    margin-left: 500px;
+    margin-top: 50px;
+}
+
+#userName{
+    margin: 30px;
+    text-align: center;
+ 
+   
+}
+
+#passWord{
+    text-align: center;
+    margin: 30px;
+   
+}
+
+input{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+   
+}
+#LoginButton{
+    background-color: white;
+    margin: 20px;
+    margin-left: 100px;
+    padding: 10px;
+}
+
+#SignUp{
+    background-color: white;
+    padding: 10px;
 }

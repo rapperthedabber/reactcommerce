@@ -1,6 +1,8 @@
 
 import Link from 'next/link'
 
+import { useSession, signIn, signOut } from "next-auth/react"
+
 export default function FirstNav(){
     return(
     <div className= 'navBar'>
@@ -13,6 +15,7 @@ export default function FirstNav(){
 </div>
     <button  id = 'Shoes' ><a  href = '#About'>About</a></button>
     <button id = 'Jacket' > <a href ='https://github.com/rapperthedabber'  >Github</a></button> 
+    <button id ='Home'><Link href={'/'} >Home</Link></button>
     
 </div>
     )
