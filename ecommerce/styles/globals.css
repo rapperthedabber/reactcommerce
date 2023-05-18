@@ -401,19 +401,20 @@ box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
 }
 
 .loginCard{
-    background-color:wheat;
-    border: solid;
+   
+  
     padding: 20px;
-    border-radius: 20px;
+   
     width: 400px;
     height: 400px;
-    margin-left: 500px;
+    margin-left: 300px;
     margin-top: 50px;
 }
 
 #userName{
     margin: 30px;
     text-align: center;
+    color: white;
  
    
 }
@@ -421,6 +422,7 @@ box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
 #passWord{
     text-align: center;
     margin: 30px;
+    color: white;
    
 }
 

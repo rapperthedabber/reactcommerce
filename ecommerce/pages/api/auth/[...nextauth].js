@@ -1,7 +1,8 @@
 import NextAuth from 'next-auth'
 
 import GoogleProvider from 'next-auth/providers/google'
-
+import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
+import clientPromise from '@/lib/mongodb'
 
 export default NextAuth({
   providers: [
@@ -11,5 +12,7 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_SECRET
     }),
     // Passwordless / email sign in),
-  ]
+    
+  ],
+  adapter: MongoDBAdapter(clientPromise)
 })
