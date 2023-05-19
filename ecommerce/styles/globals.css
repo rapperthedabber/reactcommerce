@@ -84,6 +84,16 @@ body{
     border: solid black;
 }
 
+@media screen and (max-width:600px){
+    #aboutImage{
+        margin-left:10px;
+        display: flex;
+        border-radius: 10px;
+        height: 500px;
+        width: 350px;
+        border: solid black;
+    }
+}
 
 
 #tokyoIcon{
@@ -212,6 +222,17 @@ body{
     height: 1100px;
 }
 
+@media screen and (max-width:600px){
+.ProfileCard{
+
+    align-items: center;
+    background-color: wheat;
+    overflow: auto;
+    padding: 10px;
+    margin: 30px;
+    height: 800px;
+}
+}
 /* #shoeItems{
     position: relative;
     display: inline-block;
@@ -297,6 +318,17 @@ margin-left: 20px;
     border: solid;
     margin: 20px;
 }
+@media screen and (max-width: 600px){
+    #profileImage{
+        display: flex;
+        
+        width: 200px;
+        height: 200px ;
+        border: solid;
+        margin: 20px;
+        
+    }
+    }
 
 #name{
     font-family: 'Courier New', Courier, monospace;
@@ -310,6 +342,25 @@ margin-left: 20px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+@media screen  and (max-width:600px){
+    #name{
+        font-family: 'Courier New', Courier, monospace;
+        margin: 20px;
+        
+        border-radius: 20px;
+        background-color: white;
+        font-size: 50px;
+        width: 300px;
+       padding: 30px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+  
+    
+}
+
+
+
+
 #age{
     font-family: 'Courier New', Courier, monospace;
     margin-left: 100px;
@@ -318,6 +369,17 @@ margin-left: 20px;
     font-size: 50px;
     width: 500px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+@media screen and (max-width:600px){
+    #age{
+        font-family: 'Courier New', Courier, monospace;
+        border-radius: 20px;
+        background-color: white;
+        font-size: 50px;
+        width: 200px;
+        margin-left: 20px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
 }
 
 #bio{
@@ -328,6 +390,19 @@ margin-left: 20px;
     font-size: 50px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     width: 500px;
+    display: flex;
+}
+
+@media screen and (max-width:600px){
+    #bio{
+        font-family: 'Courier New', Courier, monospace;
+        margin-left: 10px;
+        border-radius: 20px;
+        background-color: white;
+        font-size: 50px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        width: 300px;
+    }
 }
 
 #profileBio{
@@ -404,11 +479,23 @@ box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
    
   
     padding: 20px;
+ 
    
     width: 400px;
     height: 400px;
     margin-left: 300px;
     margin-top: 50px;
+}
+
+@media screen and (max-width: 600px
+    
+) {.loginCard{
+   margin-left: 10px;
+    float: left;
+    height: 400px;
+   
+}
+
 }
 
 #userName{
@@ -418,6 +505,7 @@ box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
  
    
 }
+
 
 #passWord{
     text-align: center;
@@ -466,6 +554,14 @@ input{
 form{
    margin-left: 300px;
 
+}
+@media screen  and (max-width: 600px){
+    form{
+        margin-left: 20px
+     
+     }
+    
+    
 }
 
 #editName{
@@ -531,4 +627,60 @@ form{
 input{
     width: 500px;
     margin: 20px;
+}
+
+@media screen and (max-width: 600px){
+    input{
+        width: 300px;
+    }
+}
+
+.shoppingCart{
+    width: 300px;
+    height: 900px;
+    margin: 20px;
+    background-color: wheat;
+    padding: 30px;
+
+}
+#yourCart{
+    color: white;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.flexCart{
+    display: flex;
+}
+#cartItems{
+    width: 50px;
+    height: 50px;
+}
+
+#cartImage{
+    background-color: white;
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#cartImage:hover{
+    background-color: white;
+    margin: 20px;
+    cursor: pointer;
+    border: solid black;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.yourTotal{
+    background-color: white;
+    
 }
