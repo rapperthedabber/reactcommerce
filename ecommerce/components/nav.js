@@ -2,7 +2,7 @@ import {useRouter} from 'next/router'
 import Link from 'next/link'
 import axios from 'axios'
 import getJacket from '../pages/api/JacketaAPI'
-import { useSession, signIn, signOut } from "next-auth/react"
+// import { useSession, signIn, signOut } from "next-auth/react"
 
 
 export default function Nav(){

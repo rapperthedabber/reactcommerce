@@ -1,13 +1,12 @@
 import Jacket from '@/components/Jacket'
 import Nav from '@/components/nav'
 import {useRouter} from 'next/router'
-import { useSession, signIn, signOut } from "next-auth/react"
+// import { useSession, signIn, signOut } from "next-auth/react"
 import Link from 'next/link'
 export default  function renderJacket(){
 
-  const { data: session } = useSession()
-  if(session)
-  {
+
+ 
     return(
       <>
       <div>
@@ -25,4 +24,4 @@ export default  function renderJacket(){
     </>
     )
   }
-   }
+   

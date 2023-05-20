@@ -1,8 +1,8 @@
 import {useRouter} from 'next/router'
-import Link from 'next/link'
 import FirstNav from '@/components/firstNav'
 import axios from 'axios'
 import { useState } from 'react'
+import Link from 'next/link'
 export default function renderNav(){
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -12,21 +12,23 @@ export default function renderNav(){
     await axios.post('/api/Login', data)
    }
 
-   async function postNewUser(event){
-    event.preventDefault()
-    const data = {username, password}
-    await axios.post('/api/signUp' , data)
-   }
+//    async function postNewUser(event){
+//     event.preventDefault()
+//     const data = {username, password}
+//     await axios.post('/api/signUp' , data)
+//    }
     return(
         <>
         <FirstNav />
-        <div className='loginCard'>
+        <div >
+            <form className='loginCard' action='/api/signUp' method='post'>
             <span id = 'userName'>Username</span>
-            <input placeholder='username' value = {username} onChange={ (event)=>setUsername(event.target.value)}></input>
+            <input type = "username"  placeholder='username' name = 'username' ></input>
             <span id = 'passWord'>Password</span>
-            <input placeholder='password' value = {password} onChange = {(event)=>setPassword(event.target.value)}></input>
-            <button  id = 'LoginButton'type='submit' onClick={postUser}>Login</button>
-            <button id = 'SignUp'type = 'submit' onClick={postNewUser}>SignUp</button>
+            <input type = "password" placeholder='password' name = 'password'  ></input>
+            {/* <button  id = 'LoginButton'type='submit' onClick={postUser}>Login</button> */}
+            <button id = 'SignUp'type = 'submit'  value='Register'>SignUp</button>
+            </form>
         </div>
         </>
     )

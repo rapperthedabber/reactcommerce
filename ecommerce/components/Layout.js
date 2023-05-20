@@ -7,7 +7,7 @@ import FirstNav from "./firstNav"
 import Link from 'next/link'
 
 
-import { useSession, signIn, signOut } from "next-auth/react"
+// import { useSession, signIn, signOut } from "next-auth/react"
 
 export default function Layout() {
   const data =['https://www.urbanfashionstudio.com/wp-content/uploads/2021/08/Mens-Black-Leather-Jackets-USA.jpg', 
@@ -27,8 +27,8 @@ useEffect(() =>{
   return () => clearInterval(interval)})
 
 
-  const { data: session } = useSession()
-  if(!session){
+
+
     return(
       <>
       <FirstNav />
@@ -77,23 +77,4 @@ useEffect(() =>{
   </>
     );
   }
-
-  return (
-    <div>
-      <Nav/>
-      <div >
-      
-      <Jacket />
-      <Shoes/>
-      </div>
-    <div>
-    </div>
-    <div className={'bg-white w-screen text-center w-full'}>
-    <button className ={' p-2'}onClick={()=>signOut()}>Sign Out</button>
-    <h1>logged in as {session.user.email}</h1>
-    
-    </div>
-    </div>
-
-  )
-  }
+  
