@@ -11,10 +11,13 @@ export default async function signingUp(req,res){
     await connect()
  try{
     const user = await User.create(req.body);
-    if(!user){
-        res.json({"code": 'User not Created'})
+    if(user){
+        // res.json({"code": 'User Created!'})
+        res.redirect('/homePage/homePage')
+    }else{
+        res.json({"code": "User not Created"})
     }
-    res.status(200)
+
 
  }catch (error){
     res.status(400).json({status: 'not able to create a new user'})
