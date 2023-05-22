@@ -242,10 +242,11 @@ body{
 } */
 
 .shoeStuff{
+    display: flex;
     background-color: white;
    margin: 20px;
    width: 320px;
-   height: 500px;
+   height: 550px;
    margin: 20px;
 flex-wrap: wrap;
 border-radius: 10px;
@@ -261,10 +262,11 @@ border-radius: 10px;
 }
 
 .shoeStuff:hover{
+    display: flex;
     background-color: white;
     margin: 20px;
     width: 320px;
-    height: 500px;
+    height: 550px;
     margin: 20px;
  flex-wrap: wrap;
 box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
@@ -420,21 +422,21 @@ margin-left: 20px;
 }
 
 .jacketStuff:hover{
-
+display: flex;
     background-color: white;
     margin: 20px;
     width: 320px;
-    height: 500px;
+    height: 550px;
     margin: 20px;
  flex-wrap: wrap;
 box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
 }
 .jacketStuff{
-
+    display: flex;
     background-color: white;
     margin: 20px;
     width: 320px;
-    height: 500px;
+    height: 550px;
     margin: 20px;
  flex-wrap: wrap;
  border-radius: 10px;
@@ -682,5 +684,13 @@ input{
 
 .yourTotal{
     background-color: white;
-    
+
+}
+
+#add{
+    background-color: white;
+}
+
+#ADD{
+    background-color: red;
 }

@@ -1,7 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Astroboy from '../images/Astroboy.jpg'
 import Pochita from '../images/Pochita.jpg'
 import Naruto from '../images/Naruto.jpg'
+import Add from '../images/add.png'
+
 export default function Shoes(){
   const Shoe = [{
     url: 'https://m.media-amazon.com/images/I/51Mu4mf8okL.jpg',
@@ -30,6 +33,7 @@ export default function Shoes(){
    <img  id ='shoeImage' src = {shoes.url}></img>
    <h2 id = 'shoeDescription'>{shoes.description}</h2>
    <h3 id ='shoePrice'>{shoes.price}</h3>
+   <Link href = '/'><Image src = {Add}></Image></Link>
    </div>
 ))}
       </div>
