@@ -26,6 +26,10 @@ export default function Shoes(){
   price: '200.00'
   
 }]
+
+function alertMe(){
+  alert('added to cart')
+}
     return(
       <div className ='shoeItems'>
 {Shoe.map((shoes)=>(
@@ -33,7 +37,7 @@ export default function Shoes(){
    <img  id ='shoeImage' src = {shoes.url}></img>
    <h2 id = 'shoeDescription'>{shoes.description}</h2>
    <h3 id ='shoePrice'>{shoes.price}</h3>
-   <Link href = '/'><Image src = {Add}></Image></Link>
+   <button onClick={()=>alertMe()}><Image src = {Add}></Image></button>
    </div>
 ))}
       </div>
