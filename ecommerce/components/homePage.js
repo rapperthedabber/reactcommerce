@@ -1,4 +1,5 @@
 import { useSession, signOut } from "next-auth/react"
+import Footer from "./signOut"
 import React from "react"
 
 
@@ -17,7 +18,8 @@ export default function homePage(){
       <div>
       </div>
       <div className={'bg-white w-screen text-center w-full'}>
-      <button className ={' p-2'}onClick={()=>signOut()}>Sign Out</button>
+        <Footer />
+      {/* <button className ={' p-2'}onClick={()=>signOut()}>Sign Out</button> */}
       {/* <h1>logged in as {session.user.email}</h1> */}
       
       </div>

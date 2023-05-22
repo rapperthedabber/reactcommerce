@@ -1,4 +1,5 @@
 import Nav from './nav'
+import Footer from './signOut'
 import { useState } from 'react'
 import Jacket from '@/components/Jacket'
 import { useEffect } from 'react'
@@ -57,7 +58,11 @@ useEffect(() =>{
     <div class = "background" >
     <div className={'text-center w-full'}>
       <div>
-      <button id = 'loginSignup'><Link href ={'/Login/Login'}>Login/SignUp</Link></button>
+      <button id = 'loginSignup'><Link href ={'/SignUp/SignUp'}>SignUp</Link></button>
+      </div>
+      <div>
+      <button id = 'loginSignup'><Link href ={'/Login/Login'}>Login</Link></button>
+
       </div>
     <button className={'bg-white p-2 rounded-lg items-center '} onClick={()=>signIn('google')}>Login to Google</button>
     </div>
@@ -74,6 +79,8 @@ useEffect(() =>{
     they desire to see. </h2>
 
   </div>
+  <Footer />
+
   </>
     );
   }

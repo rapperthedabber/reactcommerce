@@ -21,13 +21,13 @@ export default function renderNav(){
         <>
         <FirstNav />
         <div >
-            <form className='loginCard' action='/api/Login' method='post'>
+            <form className='loginCard' action='/api/signUp' method='post'>
             <span id = 'userName'>Username</span>
             <input type = "username"  placeholder='username' name = 'username' ></input>
             <span id = 'passWord'>Password</span>
             <input type = "password" placeholder='password' name = 'password'  ></input>
             {/* <button  id = 'LoginButton'type='submit' onClick={postUser}>Login</button> */}
-            <button id = 'SignUp'type = 'submit'  value='Register'>Login</button>
+            <button id = 'SignUp'type = 'submit'  value='Register'>SignUp</button>
             </form>
         </div>
         </>
