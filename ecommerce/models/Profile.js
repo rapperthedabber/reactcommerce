@@ -2,7 +2,7 @@
 import mongoose from "mongoose";
 const { Schema, model } = require('mongoose');
 
-const userSchema = mongoose.Schema({
+const profileSchema= mongoose.Schema({
     url: {
         type: String,
         required: true
@@ -19,9 +19,9 @@ const userSchema = mongoose.Schema({
     },
     bio: {
         type: String,
-        required: ture
+        required: true
     }
 
 
 })
-module.exports = mongoose.models.User || mongoose.model('User', userSchema)
+module.exports = mongoose.models.Profile || mongoose.model('Profile', profileSchema)
