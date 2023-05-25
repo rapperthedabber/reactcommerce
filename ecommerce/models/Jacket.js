@@ -1,8 +1,11 @@
+import React from "react";
+import mongoose from "mongoose"
+import { model } from "mongoose";
 
-import mongoose from "mongoose";
-const { Schema, model } = require('mongoose');
+import { models } from "mongoose";
 
-const jacketSchema =   mongoose.Schema({
+const JacketSchema = new mongoose.Schema(
+    {
     category: {
         type: String,
         required: true
@@ -19,7 +22,7 @@ const jacketSchema =   mongoose.Schema({
       
     },
     price: {
-        type: Number,
+        type: [Number],
         required: true
     },
 
@@ -29,5 +32,8 @@ const jacketSchema =   mongoose.Schema({
     }
 
 
-})
-module.exports =  mongoose.models.Jacket || mongoose.model('Jacket', jacketSchema)
+}); 
+module.exports = mongoose.models?.jacket || mongoose.model('jacket', JacketSchema)
+
+
+

@@ -53,25 +53,31 @@ export default function Jacket(){
 
 
 
-  function AlertMe(){
-    alert('added Item to cart')
+  async function postJacket(){
+    
+    const data = { description, price, url}
+    await axios.get('/api/postJacket', data).then((res)=>{
+      res.status(200).json({message: 'Went through'})
+    })
   }
 
     return(
       <div className='jacketItem'>
         {jacketStuff.map((jacket)=>(
+          
           <div className='jacketStuff'>
-            <img id = 'jacketPicture'src ={jacket.url}></img>
-            <h2 id = 'jacketDescription'>{jacket.description}</h2>
-            <h3 id = 'jacketPrice'>{jacket.price}</h3>
+            <img value = 'url' name = 'url' id = 'jacketPicture'src ={jacket.url}></img>
+            <h2 value = 'description' name = 'description' id = 'jacketDescription'>{jacket.description}</h2>
+            <h3  value = 'price'  name = 'price'id = 'jacketPrice'>{jacket.price}</h3>
   
-           <button  onClick={()=>{AlertMe()}}><Image  src = {Add} id = 'add'  /></button>
+           <button  value= 'Register' onClick={()=>{postJacket()}}><Image  src = {Add} id = 'add'  /></button>
 
            
             
               
-           
+          
             </div>
+           
         ))}
       </div>
 
