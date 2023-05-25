@@ -1,7 +1,7 @@
 import {useRouter} from 'next/router'
 import Link from 'next/link'
 import axios from 'axios'
-import getJacket from '../pages/api/JacketaAPI'
+import getJacket from '../pages/api/postJacket'
 // import { useSession, signIn, signOut } from "next-auth/react"
 
 

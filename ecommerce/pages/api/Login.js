@@ -2,6 +2,7 @@
 
 import mongoose from "mongoose"
 import User from '../../models/newSign'
+import connect from "@/lib/mongodb"
 
 
 export default async function Login(req,res){

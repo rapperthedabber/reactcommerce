@@ -2,7 +2,9 @@ import Image from 'next/image'
 import Dashie from '../images/Dashie.jpg'
 import Add from '../images/add.png'
 import { useState } from 'react'
+import axios from 'axios'
 export default function Jacket(){
+
   const jacketStuff = [{
     id:1,
     url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEUe1LG8DxkgruWZVlPWcss_Sdr8u4zUK3ag&usqp=CAU',
@@ -44,6 +46,10 @@ export default function Jacket(){
     color: 'add'
   }]
  
+// function postJacket(){
+//   axios.post('/api/getJacket').then((res)=>{
+//     console.log(res.data)
+//   })}
 
 
 
