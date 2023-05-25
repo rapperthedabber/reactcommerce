@@ -4,17 +4,22 @@ import signingUp from "./signUp";
 import Profile from '../../models/Profile'
 import renderProfile from "./userProfile";
 import mongoose from "mongoose";
+import connect from "@/lib/mongodb";
+import { data } from "autoprefixer";
 
 export default async function updateProfile(req,res){
-  try{
-    const user = await Profile.find()
-    if(user){
-    return res.status(200)
-    }
-  }
-  catch{
-    res.status(400).json({status: 'not able to get profile'})
-  }
+      if(req.method !== "GET"){
+        res.status(400).send({msg: 'you did not do a GET REQUEST'})
+      }
+    
+      try{
+        await connect()
+        const task = await Profile.find().limit(1).sort({$natural:-1})
+        res.status(200).send(task)
+      }catch(err){
+        res.status(400).send({err, msg: 'Something went wrong!'})
+
+      }
 
  
   

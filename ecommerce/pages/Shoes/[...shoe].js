@@ -5,7 +5,7 @@ export default function renderShoes(){
   
     return(
         <>
-        <Nav />
+        <Nav  />
         <Shoes />
       </>
     )

@@ -1,7 +1,9 @@
 
-import connect from "@/lib/mongodb"
+
 import mongoose from "mongoose"
 import User from '../../models/newSign'
+
+
 export default async function Login(req,res){
 await connect()
 const {username, password} = req.body
