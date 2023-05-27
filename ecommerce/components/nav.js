@@ -41,7 +41,7 @@ export default function Nav(){
         <button id = "Jacket" onClick ={()=>handleJacket()}>Jacket</button>
         <button id='Products' onClick ={()=> handleProduct()}>Products</button>
         <button  id = "Profile" onClick = {()=> Profile()}>Profile</button>
-        <Link href = {'cart/cart'}>Cart</Link>
+        <button id = "Cart" onClick = {()=> Cart()}>Cart</button>
         <button id = 'editProfile' onClick={()=> editProfile()}>Edit Profile</button>
         
     </div>

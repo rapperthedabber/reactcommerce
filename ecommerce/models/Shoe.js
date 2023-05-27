@@ -24,4 +24,4 @@ const shoeSchema= mongoose.Schema({
 
 
 })
-module.exports = mongoose.models.Shoe || mongoose.model('Shoe', profileSchema)
+module.exports = mongoose.models?.Shoe || mongoose.model('Shoe', shoeSchema)

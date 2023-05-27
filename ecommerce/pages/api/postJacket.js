@@ -1,13 +1,11 @@
 
 import connect from '@/lib/mongodb'
 import { jacket } from '@/models/Jacket'
+import JacketData from '../../data/jacket.json'
 
 export default async function getJacket(req,res){
-const {method} = req.body
-if(method === 'POST'){
-    res.status(200).json({message: 'you did ittttt'})
-}
-
+const user = jacket.create(JacketData)
+res.status(200).json({user})
 
 
 }

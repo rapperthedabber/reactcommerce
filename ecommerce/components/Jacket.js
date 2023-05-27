@@ -51,24 +51,28 @@ export default function Jacket(){
 //     console.log(res.data)
 //   })}
 
+const [description, setDescription] = useState()
+const [url, setUrl] = useState()
+const [price, setPrice] = useState()
 
 
-  async function postJacket(){
+  // async function postJacket(){
+  
     
-    const data = { description, price, url}
-    await axios.get('/api/postJacket', data).then((res)=>{
-      res.status(200).json({message: 'Went through'})
-    })
-  }
+  //   const data = { description, price, url}
+  //   await axios.get('/api/postJacket', data).then((res)=>{
+  //     res.status(200).json({message: 'Went through'})
+  //   })
+  // }
 
     return(
       <div className='jacketItem'>
         {jacketStuff.map((jacket)=>(
           
           <div className='jacketStuff'>
-            <img value = 'url' name = 'url' id = 'jacketPicture'src ={jacket.url}></img>
-            <h2 value = 'description' name = 'description' id = 'jacketDescription'>{jacket.description}</h2>
-            <h3  value = 'price'  name = 'price'id = 'jacketPrice'>{jacket.price}</h3>
+            <img value = 'url' key={jacket._id} name = 'url' id = 'jacketPicture'src ={jacket.url} ></img>
+            <h2 value = 'description' key={jacket._id}name = 'description' id = 'jacketDescription'>{jacket.description}</h2>
+            <h3  value = 'price' key={jacket._id} name = 'price'id = 'jacketPrice'>{jacket.price}</h3>
   
            <button  value= 'Register' onClick={()=>{postJacket()}}><Image  src = {Add} id = 'add'  /></button>
 
