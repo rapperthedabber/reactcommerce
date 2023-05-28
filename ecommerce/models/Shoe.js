@@ -3,6 +3,11 @@ import mongoose from "mongoose";
 const { Schema, model } = require('mongoose');
 
 const shoeSchema= mongoose.Schema({
+    id: {
+
+        type: Number,
+        required: true
+    },
     category: {
         type: String,
         required: true

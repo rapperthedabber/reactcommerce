@@ -1,11 +1,11 @@
 import connect from "@/lib/mongodb";
 import mongoose from "mongoose";
-import Shoes from "@/components/Shoes";
+import Shoe from '../../models/Shoe';
 
-async function postShoe(req,res){
+export default async function postShoe(req,res){
     await connect();
     try{
-        const myShoes = await Shoes.create(req.body);
+        const myShoes = await Shoe.create(req.body);
         if(myShoes){
             return res.status(200).json({'code': "Successfully added shoe item"})
         }

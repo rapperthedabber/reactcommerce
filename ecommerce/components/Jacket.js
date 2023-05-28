@@ -57,15 +57,13 @@ export default function Jacket(){
 //     console.log(res.data)
 //   })}
 
-const [description, setDescription] = useState()
-const [url, setUrl] = useState()
-const [price, setPrice] = useState()
-
+const [editAdd, setEditAdd] = useState('add')
 
   const postJacket = (id,url,description,price,category,product)=>{
   
     console.log(id, url, description, price, category, product)
-   
+    alert('you added ' + product + " to your cart")
+   setEditAdd('ADD')
      axios.post('/api/postJacket', {
       id: id,
       url: url,
@@ -88,7 +86,7 @@ const [price, setPrice] = useState()
             <h6>{jacket.category}</h6>
             <h2 value = {jacket.id} key={jacket.id} name = 'description' id = 'jacketDescription'>{jacket.description}</h2>
             <h3  value = {jacket.id} key={jacket.id} name = 'price'id = 'jacketPrice'>{jacket.price}</h3>
-            <h3 value = {jacket.id} key={jacket.id} name = 'product'>{jacket.product}</h3>
+            <h3 value = {jacket.id} key={jacket.id} name = 'product' id ={editAdd}>{jacket.product}</h3>
             <h3 value = {jacket.id} key={jacket.id} name = 'id'>{jacket.id}</h3>
            <button  key={jacket.id} type = 'submit'  onClick = {()=>postJacket(jacket.id, jacket.url,jacket.description, jacket.price, jacket.category,   jacket.product )}value= 'Register' ><Image  src = {Add} id = 'add'  /></button>
 
