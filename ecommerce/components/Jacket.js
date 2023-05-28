@@ -90,7 +90,7 @@ const [price, setPrice] = useState()
             <h3  value = {jacket.id} key={jacket.id} name = 'price'id = 'jacketPrice'>{jacket.price}</h3>
             <h3 value = {jacket.id} key={jacket.id} name = 'product'>{jacket.product}</h3>
             <h3 value = {jacket.id} key={jacket.id} name = 'id'>{jacket.id}</h3>
-           <button  type = 'submit'  onClick = {()=>postJacket(jacket.id, jacket.url,jacket.description, jacket.price, jacket.category,   jacket.product )}value= 'Register' ><Image  src = {Add} id = 'add'  /></button>
+           <button  key={jacket.id} type = 'submit'  onClick = {()=>postJacket(jacket.id, jacket.url,jacket.description, jacket.price, jacket.category,   jacket.product )}value= 'Register' ><Image  src = {Add} id = 'add'  /></button>
 
            
             
