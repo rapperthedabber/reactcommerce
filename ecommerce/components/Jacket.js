@@ -62,12 +62,19 @@ const [url, setUrl] = useState()
 const [price, setPrice] = useState()
 
 
-  async function postJacket(){
+  const postJacket = (id,url,description,price,category,product)=>{
   
-    
-    const data = { description, price, url}
-    await axios.get('/api/postJacket').then((res)=>{
-      res.status(200).json({message: 'Went through'})
+    console.log(id, url, description, price, category, product)
+   
+     axios.post('/api/postJacket', {
+      id: id,
+      url: url,
+      description: description,
+      price: price,
+      category: category,
+      product: product
+     }).then((res)=>{
+      console.log(res)
     })
   }
 
@@ -75,21 +82,21 @@ const [price, setPrice] = useState()
       <div className='jacketItem'>
         {jacketStuff.map((jacket)=>(
           
-          <form className='jacketStuff' action = '/api/postJacket' method='post'> 
-            <img value = 'url' key={jacket.id} name = 'url' id = 'jacketPicture'src ={jacket.url} ></img>
+          <div className='jacketStuff'> 
+            <img value = {jacket.url} key={jacket.id} name = 'url' id = 'jacketPicture'src ={jacket.url} ></img>
 
             <h6>{jacket.category}</h6>
-            <h2 value = 'description' key={jacket.id} name = 'description' id = 'jacketDescription'>{jacket.description}</h2>
-            <h3  value = 'price' key={jacket.id} name = 'price'id = 'jacketPrice'>{jacket.price}</h3>
-            <h3 value = 'product'>{jacket.product}</h3>
-            <h3 value = 'id'>{jacket.id}</h3>
-           <button  value= 'Register' ><Image  src = {Add} id = 'add'  /></button>
+            <h2 value = {jacket.id} key={jacket.id} name = 'description' id = 'jacketDescription'>{jacket.description}</h2>
+            <h3  value = {jacket.id} key={jacket.id} name = 'price'id = 'jacketPrice'>{jacket.price}</h3>
+            <h3 value = {jacket.id} key={jacket.id} name = 'product'>{jacket.product}</h3>
+            <h3 value = {jacket.id} key={jacket.id} name = 'id'>{jacket.id}</h3>
+           <button  type = 'submit'  onClick = {()=>postJacket(jacket.id, jacket.url,jacket.description, jacket.price, jacket.category,   jacket.product )}value= 'Register' ><Image  src = {Add} id = 'add'  /></button>
 
            
             
               
           
-            </form>
+            </div>
            
         ))}
       </div>

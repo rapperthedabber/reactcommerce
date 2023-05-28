@@ -2,8 +2,6 @@
 import connect from '@/lib/mongodb'
 import jacket from '../../models/Jacket'
 
-import JacketData from '../../data/jacket.json'
-
 export default async function getJacket(req,res){
     await connect()
     try{
