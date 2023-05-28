@@ -1,6 +1,7 @@
 import Image from "next/image"
 import deletePicture from "../../images/delete.png"
 import Nav from "@/components/nav"
+import { useState } from "react"
 export default function cart(){
 const cartItems =[{
     img: "https://teeholly.s3.us-west-1.amazonaws.com/2022/09/anime-friends-hoodie_1664183871.jpg",
@@ -15,6 +16,8 @@ const priceItems=[{
 },{
     price:1022.99
 }]
+
+const [deleted, setDeleted] = useState(true)
     return(
         <>
         <Nav />
@@ -24,7 +27,7 @@ const priceItems=[{
                 <div className="flexCart">
                 <img id = 'cartItems'src={data.img}></img>
                 <h2>{data.price}</h2>
-                <Image id ="cartImage" src={deletePicture} alt='no Photo' />
+               <Image id ="cartImage" onClick = {()=>setDeleted(false)}src={deletePicture} alt='no Photo' />
                 
                 </div>
                 

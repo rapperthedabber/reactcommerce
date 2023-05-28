@@ -1,11 +1,23 @@
 
 import connect from '@/lib/mongodb'
-import { jacket } from '@/models/Jacket'
+import jacket from '../../models/Jacket'
+
 import JacketData from '../../data/jacket.json'
 
 export default async function getJacket(req,res){
-const user = jacket.create(JacketData)
-res.status(200).json({user})
-
+    await connect()
+    try{
+       const Jacket= await jacket.create(req.body);
+       if(Jacket){
+            res.json({"code": 'User Created!'})
+       }else{
+           res.json({"code": "User not Created"})
+       }
+   
+   
+    }catch (error){
+       res.status(400).json({status: 'not able to create jacket'})
+   
+    }
 
 }

@@ -6,6 +6,11 @@ import { models } from "mongoose";
 
 const JacketSchema = new mongoose.Schema(
     {
+     id:{
+            type: [Number],
+            required: true
+
+      },
     category: {
         type: String,
         required: true
