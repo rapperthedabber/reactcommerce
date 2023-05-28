@@ -3,19 +3,19 @@ import deletePicture from "../../images/delete.png"
 import Nav from "@/components/nav"
 import { useState } from "react"
 export default function cart(){
-const cartItems =[{
-    img: "https://teeholly.s3.us-west-1.amazonaws.com/2022/09/anime-friends-hoodie_1664183871.jpg",
-    price: '1022.99'
-},{
-    img: "https://www.reallgraphics.com/wp-content/uploads/2023/01/anime-shoes-ace-one-piece-1_gbmzfg.jpg",
-    price:'1022.99'
-}]
+// const cartItems =[{
+//     img: "https://teeholly.s3.us-west-1.amazonaws.com/2022/09/anime-friends-hoodie_1664183871.jpg",
+//     price: '1022.99'
+// },{
+//     img: "https://www.reallgraphics.com/wp-content/uploads/2023/01/anime-shoes-ace-one-piece-1_gbmzfg.jpg",
+//     price:'1022.99'
+// }]
 
-const priceItems=[{
-    price: 1022.99
-},{
-    price:1022.99
-}]
+// const priceItems=[{
+//     price: 1022.99
+// },{
+//     price:1022.99
+// }]
 
 const [deleted, setDeleted] = useState(true)
     return(
