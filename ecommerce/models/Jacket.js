@@ -7,7 +7,7 @@ import { models } from "mongoose";
 const JacketSchema = new mongoose.Schema(
     {
      id:{
-            type: [Number],
+            type: Number,
             required: true
 
       },
@@ -27,7 +27,7 @@ const JacketSchema = new mongoose.Schema(
       
     },
     price: {
-        type: [Number],
+        type: Number,
         required: true
     },
 

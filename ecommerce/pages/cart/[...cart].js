@@ -31,6 +31,15 @@ useEffect(() => {
     });
 }, [])
 
+const deleteJacket=(id)=>{
+    console.log(id)
+     axios.delete(`/api/deleteJacket/${id}`).then((res)=>{
+        console.log(res)
+        
+
+    })
+}
+
 
 const [deleted, setDeleted] = useState(true)
     return(
@@ -40,9 +49,12 @@ const [deleted, setDeleted] = useState(true)
             <h1 id="yourCart">Your Cart: </h1>
             {cart?.map((data)=>(
                 <div className="flexCart">
+                   
+
                 <img id = 'cartItems'src={data.url}></img>
                 <h2>{data.price}</h2>
-               <Image id ="cartImage" onClick = {()=>setDeleted(false)}src={deletePicture} alt='no Photo' />
+              
+               <button type = 'submit' key = {data.id} onClick ={()=>deleteJacket(data._id)}> <Image id ="cartImage" src={deletePicture} alt='no Photo' /></button>
                 
                 </div>
                 

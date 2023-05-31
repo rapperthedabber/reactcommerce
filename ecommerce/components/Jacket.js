@@ -62,7 +62,7 @@ const [editAdd, setEditAdd] = useState('add')
   const postJacket = (id,url,description,price,category,product)=>{
   
     console.log(id, url, description, price, category, product)
-    alert('you added ' + product + " to your cart")
+    alert('you added ' + product + " to your")
    setEditAdd('ADD')
      axios.post('/api/postJacket', {
       id: id,
