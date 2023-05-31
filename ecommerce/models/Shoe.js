@@ -8,6 +8,11 @@ const shoeSchema= mongoose.Schema({
         type: Number,
         required: true
     },
+    url:{
+
+        type: String,
+        required: true
+    },
     category: {
         type: String,
         required: true

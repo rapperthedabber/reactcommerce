@@ -31,6 +31,16 @@ useEffect(() => {
     });
 }, [])
 
+const [shoe, setShoe] = useState([])
+useEffect(() => {
+    axios.get('/api/getShoe').then((res) => {
+        console.log(res)
+        setShoe(res.data);
+       
+        
+    });
+}, [])
+
 const deleteJacket=(id)=>{
     console.log(id)
      axios.delete(`/api/deleteJacket/${id}`).then((res)=>{
@@ -40,6 +50,13 @@ const deleteJacket=(id)=>{
     })
 }
 
+const jacketPrice = cart.map((data)=>(
+   data.price
+))
+
+const shoePrice = shoe.map((shoe)=>(
+    shoe.price
+))
 
 const [deleted, setDeleted] = useState(true)
     return(
@@ -59,12 +76,35 @@ const [deleted, setDeleted] = useState(true)
                 </div>
                 
             ))}
+            {shoe?.map((data)=>(
+                <div className="flexCart">
+                   
+
+                <img id = 'cartItems'src={data.url}></img>
+                <h2>{data.price}</h2>
+              
+               <button type = 'submit' key = {data.id} onClick ={()=>deleteJacket(data._id)}> <Image id ="cartImage" src={deletePicture} alt='no Photo' /></button>
+                
+                </div>
+                
+            ))}
             <div className="yourTotal">
+
+                
+                    <div>
                     <h1>Your Total: </h1>
+                 
+                  
+                    <h2>{`${parseInt(jacketPrice) + parseInt(shoePrice)}`}</h2>
+                    
+                   </div>
+                   
+                
+                    {/* <h1>Your Total: </h1>
                    
                    
                   
-                    <h2>{`${parseInt(cart.price)  + parseInt(cart.price) }`}</h2>
+                    <h2>{`${parseInt(cart.price)  + parseInt(cart.price) }`}</h2> */}
                     </div>
                    
                     
