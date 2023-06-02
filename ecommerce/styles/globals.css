@@ -697,3 +697,58 @@ input{
 #ADD{
     background-color: red;
 }
+
+footer{
+    background-color: wheat;
+    display: flex;
+    padding: 20px;
+
+
+}
+
+#footer-intro{
+    margin: 10px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+
+#footer-phrase{
+ margin: 10px;
+ font-weight: bolder;
+
+}
+
+#signOut{
+  margin-left: 900px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.paymentContainer{
+ 
+    background-color: wheat;
+   margin-left: 500px;
+   margin-top: 30px;
+   margin-right: 30px;
+   padding: 20px;
+   border-radius: 20px;
+   height: 800px;
+   width: 550px;
+  
+  
+
+
+}
+
+#inputPayment{
+    border: solid;
+}
+
+#buttonPayment{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}

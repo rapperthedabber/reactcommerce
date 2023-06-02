@@ -82,12 +82,10 @@ const [editAdd, setEditAdd] = useState('add')
           
           <div className='jacketStuff'> 
             <img value = {jacket.url} key={jacket.id} name = 'url' id = 'jacketPicture'src ={jacket.url} ></img>
-
-            <h6>{jacket.category}</h6>
             <h2 value = {jacket.id} key={jacket.id} name = 'description' id = 'jacketDescription'>{jacket.description}</h2>
+            <h3 value = {jacket.id} key={jacket.id} name = 'product'>{jacket.product}</h3>
             <h3  value = {jacket.id} key={jacket.id} name = 'price'id = 'jacketPrice'>{jacket.price}</h3>
-            <h3 value = {jacket.id} key={jacket.id} name = 'product' id ={editAdd}>{jacket.product}</h3>
-            <h3 value = {jacket.id} key={jacket.id} name = 'id'>{jacket.id}</h3>
+          
            <button  key={jacket.id} type = 'submit'  onClick = {()=>postJacket(jacket.id, jacket.url,jacket.description, jacket.price, jacket.category,   jacket.product )}value= 'Register' ><Image  src = {Add} id = 'add'  /></button>
 
            
