@@ -141,16 +141,16 @@ function renderThankYou(){
             <div className = 'paymentContainer'>
                 <container >
                     <span>Name </span>
-                    <input  id = 'inputPayment'placeholder="ex. John Doe" required></input>
+                    <input required  id = 'inputPayment'placeholder="ex. John Doe" ></input>
                     <span> number</span>
                     <input id = 'inputPayment' type="password" placeholder="XXXX-XXXX-XXXX-XXXX" name="password" required></input>
                     <span>Security Code</span>
-                    <input  id = 'inputPayment' placeholder="XXX" required></input>
+                    <input  id = 'inputPayment' placeholder="XXX" required = {true}></input>
                     <span>Address</span>
                     <input  id = 'inputPayment'required></input>
                     <span>Postal Code</span>
                     <input id = 'inputPayment' required></input>
-                    <button id="buttonPayment" onClick= {()=>renderThankYou()}>Submit</button>
+                    <button id="buttonPayment"type ='submit' onClick= {()=>renderThankYou()} required>Submit</button>
 
                 </container>
             </div>

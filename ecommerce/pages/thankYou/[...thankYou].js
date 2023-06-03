@@ -4,7 +4,7 @@ export default function thankYou(){
 return(
     <>
 <Nav />
-    <h1>Thank You for Shopping with Us!</h1>
+    <h1 id= 'thankYou'>Thank You for Shopping with Us!</h1>
     </>
 )
 }

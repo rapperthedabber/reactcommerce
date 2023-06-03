@@ -1,7 +1,10 @@
 import {useRouter} from 'next/router'
 import Link from 'next/link'
 import axios from 'axios'
+import { useEffect } from 'react'
+
 import getJacket from '../pages/api/postJacket'
+import { useState } from 'react'
 // import { useSession, signIn, signOut } from "next-auth/react"
 
 
@@ -28,6 +31,16 @@ export default function Nav(){
         router.push('/cart/cart')
     }
     const {pathname} = router;
+const [profile, setProfile] = useState()
+    
+    useEffect(() => {
+        axios.get('/api/getUser').then((res) => {
+            setProfile(res.data);
+            console.log(res)
+            const Name = (res.data.Name)
+        });
+    }, [])
+
     return(
     <div className= 'navBar'>
         <div className={'flex'}>
@@ -42,6 +55,14 @@ export default function Nav(){
         <button id='Products' onClick ={()=> handleProduct()}>Products</button>
         <button  id = "Profile" onClick = {()=> Profile()}>Profile</button>
         <button id = "Cart" onClick = {()=> Cart()}>Cart</button>
+
+        {profile?.map((data)=>(
+            <>
+            <img  id = 'circleProfile' src={data.url}></img>
+            <h4 id = 'welcomeData'> welcome, {data.Name}</h4>
+            </>
+        ))}
+        
         <button id = 'editProfile' onClick={()=> editProfile()}>Edit Profile</button>
         
     </div>

@@ -64,7 +64,6 @@ useEffect(() =>{
       <button id = 'loginSignup'><Link href ={'/Login/Login'}>Login</Link></button>
 
       </div>
-    <button className={'bg-white p-2 rounded-lg items-center '} onClick={()=>signIn('google')}>Login to Google</button>
     </div>
   </div>
   <div className = 'aboutCard'>
