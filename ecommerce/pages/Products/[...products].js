@@ -10,9 +10,10 @@ export default function renderProducts(){
     <div>
       <Nav/>
       <div >
-      
+      <container className = 'productContainer'>
       <Jacket />
       <Shoes/>
+      </container>
       </div>
     <div>
     </div>

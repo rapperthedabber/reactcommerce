@@ -25,18 +25,18 @@ export default function Shoes(){
 }, {
   id: 3,
   category: 'Shoe',
-  product: 'Pochita Shoes',
+  product: 'Seven Deadly Shoes',
   url: 'https://www.reallgraphics.com/wp-content/uploads/2023/01/arthur-pendragon-skate-sneakers-seven-deadly-sins-custom-anime-shoes-1_sbyskn.jpg',
-  description: 'This shoe is from Chainsaw Man inspired by the character, Pochita',
-  price: '200.00'
+  description: 'From Seven Deadly Sins to Seven Deadly Shoes!',
+  price: '623.00'
   
 },{
   id: 4,
   category: 'Shoe',
   product: 'Pochita Shoes',
   url: 'https://www.reallgraphics.com/wp-content/uploads/2023/01/anime-shoes-ace-one-piece-1_gbmzfg.jpg',
-  description: 'This shoe is from Chainsaw Man inspired by the character, Pochita',
-  price: '200.00'
+  description: 'The true One Piece fans have been waiting for!',
+  price: '323.00'
   
 }]
 

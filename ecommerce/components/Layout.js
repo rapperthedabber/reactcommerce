@@ -78,7 +78,10 @@ useEffect(() =>{
     they desire to see. </h2>
 
   </div>
-  <Footer />
+  <footer>
+  <h1 id = 'footer-intro'>Tokyo Commerce</h1>
+            <h4 id ='footer-phrase'>An Otaku's paradise</h4>
+  </footer>
 
   </>
     );
