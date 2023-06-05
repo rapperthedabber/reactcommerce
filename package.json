@@ -10,6 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+    
   },
   "author": "Jerry <jamesharold1738@gmail.com>",
   "license": "ISC",
