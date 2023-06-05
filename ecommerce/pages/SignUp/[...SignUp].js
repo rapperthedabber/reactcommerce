@@ -21,7 +21,7 @@ export default function renderNav(){
         <>
         <FirstNav />
         <div >
-            <form className='loginCard' action='/api/signUp' method='post'>
+            <form className='loginCard' action='/api/signUp' method='POST'>
             <span id = 'userName'>Username</span>
             <input type = "username"  placeholder='username' name = 'username' ></input>
             <span id = 'passWord'>Password</span>

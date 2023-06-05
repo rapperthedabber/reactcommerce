@@ -12,6 +12,12 @@ export default function renderNav(){
     await axios.post('/api/Login', data)
    }
 
+   const router = useRouter();
+
+   function loggedIn(){
+    router.push('/homePage/homePage')
+   }
+
 //    async function postNewUser(event){
 //     event.preventDefault()
 //     const data = {username, password}
@@ -21,13 +27,13 @@ export default function renderNav(){
         <>
         <FirstNav />
         <div >
-            <form className='loginCard' action='/api/Login' method='post'>
+            <form className='loginCard' action='/api/Login' method='POST' >
             <span id = 'userName'>Username</span>
             <input type = "username"  placeholder='username' name = 'username' ></input>
             <span id = 'passWord'>Password</span>
             <input type = "password" placeholder='password' name = 'password'  ></input>
             {/* <button  id = 'LoginButton'type='submit' onClick={postUser}>Login</button> */}
-            <button id = 'SignUp'type = 'submit'  value='Register'>Login</button>
+            <button id = 'SignUp'type = 'submit'  value='Register' >Login</button>
             </form>
         </div>
         </>

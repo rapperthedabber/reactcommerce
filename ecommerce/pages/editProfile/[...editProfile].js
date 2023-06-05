@@ -20,7 +20,7 @@ export default function editMe(){
     return(
         <>
         <Nav />
-        <form action="/api/userProfile" method="post">
+        <form action="/api/userProfile" method="POST">
             <div>
             
        
