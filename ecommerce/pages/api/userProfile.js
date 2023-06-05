@@ -8,7 +8,7 @@ export default async function renderProfile(req,res){
         const profile = await Profile.create(req.body);
         if(profile){
             // res.json({"code": 'User Created!'})
-          res.redirect('/Profile/Profile')
+            res.writeHead(302, { Location: '/Profile/Profile' }).end()
            
         }else{
             res.json({"code": "profile not Created"})

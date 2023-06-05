@@ -13,7 +13,7 @@ if(!user){
     return res.json({status: "Not able to find user"})
 
 }else{
-    res.redirect('/Products/products')
+    res.writeHead(302, { Location: '/homePage/homePage' }).end()
 }
 
 

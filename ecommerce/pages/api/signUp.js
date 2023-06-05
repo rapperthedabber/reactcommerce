@@ -13,7 +13,8 @@ export default async function signingUp(req,res){
     const user = await User.create(req.body);
     if(user){
         // res.json({"code": 'User Created!'})
-        res.redirect('/homePage/homePage')
+        res.writeHead(302, { Location: '/homePage/homePage' }).end()
+           
     }else{
         res.json({"code": "User not Created"})
     }
