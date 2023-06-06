@@ -1,6 +1,10 @@
+
+import { NextResponse } from "next/server"
+import { redirect } from 'next/navigation';
 import mongoose from "mongoose"
-import connect from "@/lib/mongodb"
 import User from '../../models/newSign'
+import connect from "@/lib/mongodb"
+import { Router } from "next/router";
 
 
 import mongooseConnect from "@/lib/mongoose"
@@ -9,19 +13,22 @@ import mongooseConnect from "@/lib/mongoose"
 export default async function signingUp(req,res){
     // res.status(200).json(clientPromise.url)
     await connect()
- try{
+
     const user = await User.create(req.body);
-    if(user){
+    if(!user){
+        
         // res.json({"code": 'User Created!'})
-        res.writeHead(302, { Location: '/homePage/homePage' }).end()
+        res.json({status: "User not Created"})
            
     }else{
-        res.json({"code": "User not Created"})
+        
+        const {pathname} = Router
+        // res.json({"code": 'User Created!'})
+        if(pathname == '/'){
+            return Router.push('/homePage/homePage')
+             }
     }
 
 
- }catch (error){
-    res.status(400).json({status: 'not able to create a new user'})
-
- }
+ 
 }

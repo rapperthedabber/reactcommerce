@@ -33,7 +33,7 @@ export default function renderNav(){
             <span id = 'passWord'>Password</span>
             <input type = "password" placeholder='password' name = 'password'  ></input>
             {/* <button  id = 'LoginButton'type='submit' onClick={postUser}>Login</button> */}
-            <button id = 'SignUp'type = 'submit'  value='Register' >Login</button>
+            <button id = 'SignUp'type = 'submit'  value='Register' onClick = {()=>loggedIn()}>Login</button>
             </form>
         </div>
         </>

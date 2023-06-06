@@ -12,6 +12,11 @@ export default function renderNav(){
     await axios.post('/api/Login', data)
    }
 
+   const router = useRouter()
+   function homePage(){
+    router.push('/homePage/homePage')
+   }
+
 //    async function postNewUser(event){
 //     event.preventDefault()
 //     const data = {username, password}
@@ -27,7 +32,7 @@ export default function renderNav(){
             <span id = 'passWord'>Password</span>
             <input type = "password" placeholder='password' name = 'password'  ></input>
             {/* <button  id = 'LoginButton'type='submit' onClick={postUser}>Login</button> */}
-            <button id = 'SignUp'type = 'submit'  value='Register'>SignUp</button>
+            <button id = 'SignUp'type = 'submit'  value='Register' onClick={()=>homePage()}>SignUp</button>
             </form>
         </div>
         </>
