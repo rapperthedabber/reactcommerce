@@ -6,7 +6,8 @@
 This is a ecommerce app that specifically gears towards anime fans in which fans can buy merchandises, such as shoes or jackets, from their favorite anime.
 Once users are logged in or signed up, they can add items to their cart and edit their own user profile to their liking. The application is built on NEXT.js framework and is deployed on Vercel.
 <br>
-    
+    ![reactcommerce Product](https://github.com/rapperthedabber/reactcommerce/assets/116526260/20b3e434-4601-4315-830c-280f1b6d18a5)
+
     
 ## Table of Contents
 -[Description](#description)<br> 
